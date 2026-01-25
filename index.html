@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Radio Poppet">
+<link rel="manifest" href="manifest.json">
+
+<title>Radio Poppet - La musique va plus loin</title>
+<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+ 
+    <style>
+   body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 50px 20px 30px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            animation: respiration 3s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .player {
+            margin: 40px auto;
+            background: rgba(255,255,255,0.12);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .contact-radio {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .contact-radio a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-radio a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes respiration {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .install {
+            margin-top: 22px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .install a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+            transition: transform 0.15s ease, background 0.15s ease;
+            min-width: 200px;
+        }
+
+        .install a:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.20);
+        }
+
+        .install-note {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+    
+        .social-links{
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .social-links a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+            transition: transform 0.15s ease, background 0.15s ease;
+            min-width: 150px;
+        }
+        .social-links a:hover{
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.20);
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <img alt="Logo Radio Poppet" class="logo" src="logo.png"/>
+   <h1>
+    RADIO POPPET
+   </h1>
+   <p>
+    La musique va plus loin
+   </p>
+  </header>
+  <div class="player">
+   <h2>
+    🎧 Écouter en direct
+   </h2>
+   <audio autoplay="" controls="">
+    <source src="http://178.170.116.162:8000/stream" type="audio/mpeg">
+    Votre navigateur ne supporte pas le lecteur audio.
+   </audio>
+<!-- Bouton spécial iPhone -->
+<div style="margin-top:18px;">
+<a href="http://178.170.116.162:8000/stream" target="_blank" rel="noopener"
+style="display:inline-block;padding:12px 18px;border-radius:14px;
+background:rgba(255,255,255,0.18);color:#fff;font-weight:700;
+text-decoration:none;border:1px solid rgba(255,255,255,0.25);">
+▶ Écouter sur iPhone
+</a>
+</div>
+
+<!-- Bouton écouter comme une appli -->
+<div style="margin-top:18px;">
+<a href="#"
+onclick="alert('📱 Sur iPhone :\n1 Ouvre ce site dans Safari\n2 Bouton Partager\n3 Sur l’écran d’accueil\n\n🤖 Sur Android :\n1 Ouvre ce site dans Google Chrome\n2 Menu (⋮ en haut à droite)\n3 Ajouter à l’écran d’accueil')"
+style="display:inline-block;padding:14px 20px;border-radius:14px;
+background:rgba(255,255,255,0.22);color:#fff;font-weight:700;
+text-decoration:none;border:1px solid rgba(255,255,255,0.35);">
+📲 Écouter Radio Poppet comme une appli
+</a>
+</div>
+<!-- Explication simple installation -->
+<div style="margin-top:16px;font-size:14px;line-height:1.5;opacity:0.9;">
+
+<strong>📱 Sur iPhone</strong><br>
+1️⃣ Ouvre ce site dans Safari<br>
+2️⃣ Bouton Partager (⬆)<br> 
+3️⃣ Sur l’écran d’accueil<br>
+4️⃣ Valide → Radio Poppet reste sur ton téléphone<br><br>
+
+<strong>🤖 Sur Android</strong><br>
+1️⃣ Ouvre ce site dans Google Chrome<br>
+2️⃣ Menu (⋮ en haut à droite)<br>
+3️⃣ Ajouter à l’écran d’accueil<br>
+4️⃣ Valide → l’icône apparaît<br><br>
+
+✅ Fonctionne comme une appli, sans installation ni paiement
+
+</div>
+
+
+   <a href="#"
+onclick="alert('Sur iPhone : bouton Partager → Ajouter à l’écran d’accueil\n\nSur Android : menu → Ajouter à l’écran d’accueil'); return false;"
+style="display:inline-block;padding:12px 18px;border-radius:12px;
+background:rgba(255,255,255,0.18);color:#fff;
+text-decoration:none;border:1px solid rgba(255,255,255,0.4);">
+➕ Ajouter Radio Popette sur mon téléphone (gratuit)
+</a>
+  </div>
+  <footer>
+   © 2026 – Radio Poppet | Tous droits réservés
+   <div class="contact-radio">
+    📧
+    <a href="mailto:radiopoppet@outlook.com">
+     radiopoppet@outlook.com
+    </a>
+    <br/>
+    📞
+    <a href="tel:+33664813506">
+     06 64 81 35 06
+    </a>
+    <br/>
+    <strong>
+     Demandez votre soirée bar, restaurant – Radio Poppet ou pub sur l'antenne
+<br/><br/>
+<strong>Soutenez Radio Popette ❤️</strong><br/>
+Si vous aimez Radio Popette et souhaitez nous aider à continuer l’aventure,<br/>
+vous pouvez faire un don libre via PayPal.<br/>
+Chaque contribution est la bienvenue 🙏<br/><br/>
+<a href="https://www.paypal.me/dominiquetaghetti742" target="_blank"
+   style="display:inline-block;padding:12px 18px;border-radius:14px;
+   background:rgba(255,255,255,0.18);color:#fff;font-weight:700;
+   text-decoration:none;border:1px solid rgba(255,255,255,0.25);">
+   💛 Faire un don via PayPal
+</a>
+
+    </strong>
+    <div class="social-links">
+     <a href="https://wa.me/33664813506" rel="noopener" target="_blank">
+      💬 WhatsApp
+     </a>
+     <a href="https://www.instagram.com/radiopoppet" rel="noopener" target="_blank">
+      📸 Instagram
+     </a>
+     <a href="https://www.facebook.com/profile.php?id=61558861616772" rel="noopener" target="_blank">
+      📘 Facebook
+     </a>
+    </div>
+   </div>
+  </footer>
+ 
+<!-- PWA Install -->
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installButtons').style.display = 'flex';
+});
+
+function installPWA() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+    });
+  }
+}
+</script>
+
+<div id="installButtons" style="display:none; justify-content:center; gap:15px; margin-top:20px;">
+  <button onclick="installPWA()" style="padding:12px 18px; border-radius:25px; border:none; font-size:15px;">
+    📱 Installer la radio sur mon téléphone
+  </button>
+</div>
+
+
+<!-- Smart Radio Player (iPhone compatible fallback) -->
+<div style="max-width:600px;margin:20px auto; position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+  <audio id="radioPlayer" controls playsinline preload="none" style="width:100%;">
+    <source src="https://radiopoppet.fr/stream" type="audio/mpeg">
+    Votre navigateur ne supporte pas l'audio.
+  </audio>
+</div>
+<script>
+(function(){
+  const player = document.getElementById('radioPlayer');
+  player.addEventListener('error', function(){
+    try {
+      player.src = 'http://178.170.116.162:8000/stream';
+      player.load();
+      player.play();
+    } catch(e){}
+  });
+})();
+</script>
+
+</body>
+</html>
