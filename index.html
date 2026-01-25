@@ -165,16 +165,6 @@
     <source src="http://178.170.116.162:8000/stream" type="audio/mpeg">
     Votre navigateur ne supporte pas le lecteur audio.
    </audio>
-<!-- Bouton spécial iPhone (ouvre le lecteur iOS, sans casser le site) -->
-<div style="margin-top:18px;">
-  <a href="http://178.170.116.162:8000/stream" target="_blank" rel="noopener"
-     style="display:inline-block;padding:12px 18px;border-radius:14px;
-            background:rgba(255,255,255,0.18);color:#fff;font-weight:700;
-            text-decoration:none;border:1px solid rgba(255,255,255,0.25);">
-    ▶ Écouter sur iPhone
-  </a>
-</div>
-
    <div class="install">
     <a href="#" rel="noopener" target="_blank">
      🍎 Installer sur iPhone (App Store)
@@ -257,10 +247,7 @@ function installPWA() {
 
 <!-- Smart Radio Player (iPhone compatible fallback) -->
 <div style="max-width:600px;margin:20px auto;">
-  <audio id="radioPlayer" controls playsinline preload="none" style="width:100%;">
-    <source src="https://radiopoppet.fr/stream" type="audio/mpeg">
-    Votre navigateur ne supporte pas l'audio.
-  </audio>
+  
 </div>
 <script>
 (function(){
